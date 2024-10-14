@@ -11,7 +11,6 @@ public class ControllerAluno {
 	String[] menu = { "Cadastrar", "Remover", "Listar", "Pesquisar", "Voltar" };
 	public void menu(AlunoServiceImpl as) {
 		
-		
 		while (controleLoop) {
 			int opcao = JOptionPane.showOptionDialog(null, ":: Menu Aluno ::\n"
 					+ "Alunos: " + as.getTotalItens() + "\n"
@@ -36,8 +35,9 @@ public class ControllerAluno {
 				if (as.getAluno(cpf) == null) {
 					JOptionPane.showMessageDialog(null, "O CPF digitado não está cadastrado!");
 				} else {
+					String nome = as.getAluno(cpf).getNome();
 					as.remove(as.getAluno(cpf));
-					JOptionPane.showMessageDialog(null, "Aluno(a) removido(a)!");
+					JOptionPane.showMessageDialog(null, "Aluno(a) " + nome + " removido(a)!");
 				}
 				break;
 			}

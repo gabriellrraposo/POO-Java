@@ -67,7 +67,7 @@ public class ControllerAluno {
 				break;
 			}
 		}
-		}
+		} controleLoop = true;
 	};
 	public void menuSituacao(AlunoServiceImpl as) {
 		int cpf = Integer.parseInt(JOptionPane.showInputDialog("Digite o cpf do aluno:"));

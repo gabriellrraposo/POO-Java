@@ -38,8 +38,9 @@ public class ControllerProfessor {
 				if (ps.getProfessor(cpf) == null) {
 					JOptionPane.showMessageDialog(null, "O CPF digitado não está cadastrado!");
 				} else {
+					String nome = ps.getProfessor(cpf).getNome();
 					ps.remove(ps.getProfessor(cpf));
-					JOptionPane.showMessageDialog(null, "Professor(a) removido(a)!");
+					JOptionPane.showMessageDialog(null, "Professor(a) " + nome + " removido(a)!");
 				}
 				break;
 			}
@@ -69,7 +70,7 @@ public class ControllerProfessor {
 				break;
 			}
 		}
-		}
+		} controleLoop = true;
 	};
 	public void menuSalario(ProfessorServiceImpl ps, AlunoServiceImpl as) {
 		int cpf = Integer.parseInt(JOptionPane.showInputDialog("Digite o cpf do professor:"));

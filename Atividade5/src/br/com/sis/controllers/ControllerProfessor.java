@@ -39,7 +39,7 @@ public class ControllerProfessor {
 					JOptionPane.showMessageDialog(null, "O CPF digitado não está cadastrado!");
 				} else {
 					ps.remove(ps.getProfessor(cpf));
-					JOptionPane.showMessageDialog(null, "Professor removido!");
+					JOptionPane.showMessageDialog(null, "Professor(a) removido(a)!");
 				}
 				break;
 			}

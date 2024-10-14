@@ -37,7 +37,7 @@ public class ControllerAluno {
 					JOptionPane.showMessageDialog(null, "O CPF digitado não está cadastrado!");
 				} else {
 					as.remove(as.getAluno(cpf));
-					JOptionPane.showMessageDialog(null, "Aluno removido!");
+					JOptionPane.showMessageDialog(null, "Aluno(a) removido(a)!");
 				}
 				break;
 			}
@@ -76,14 +76,14 @@ public class ControllerAluno {
 		} else {
 			String situacao = "";
 			if (as.getAluno(cpf).getNota() < 40) {
-				situacao = "Reprovado";
+				situacao = "Reprovado(a)";
 			} else if (as.getAluno(cpf).getNota() < 60) {
 				situacao = "Exame especial";
 			} else {
-				situacao = "Aprovado";
+				situacao = "Aprovado(a)";
 			}
 			
-			JOptionPane.showMessageDialog(null, situacao);
+			JOptionPane.showMessageDialog(null, "Situação do(a) aluno(a) " + as.getAluno(cpf).getNome() + " - " + situacao);
 		}
 	};
 }
